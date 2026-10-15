@@ -1,7 +1,7 @@
-❯ head BhavCopy_NSE_CM_0_0_0_20261015_F_0000.csv
-TradDt,BizDt,Sgmt,Src,FinInstrmTp,FinInstrmId,ISIN,TckrSymb,SctySrs,XpryDt,FininstrmActlXpryDt,StrkPric,OptnTp,FinInstrmNm,OpnPric,HghPric,LwPric,ClsPric,LastPric,PrvsClsgPric,UndrlygPric,SttlmPric,OpnIntrst,ChngInOpnIntrst,TtlTradgVol,TtlTrfVal,TtlNbOfTxsExctd,SsnId,NewBrdLotQty,Rmks,Rsvd1,Rsvd2,Rsvd3,Rsvd4
-2026-10-15,2026-10-15,CM,NSE,STK,19078,IN0020200104,SGBJUN28,GB,,,,,2.5%GOLDBONDS2028SR-III,14571.00,14604.00,14551.01,14594.81,14600.00,14616.43,,14595.17,,,131,1910675.01,36,F1,1,,,,,
-2026-10-15,2026-10-15,CM,NSE,STK,1342,IN0020200286,SGBN28VIII,GB,,,,,2.5%GOLDBONDS2028SR-VIII,14898.89,14898.89,14576.75,14622.00,14577.00,14635.08,,14622.00,,,21,307996.44,13,F1,1,,,,
+Here is the schema of the BhavCopy dat file.
+UDIFF Bhavcopy Field Name,Trade Date,Business Date,Segment Indicator,Source,Instrument Type,Unique Instrument Identifier Of Trading Exchange,Instrument ISIN,Instrument Symbol or Scrip Code,Instrument Series,Instrument Original Expiry Date,Instrument Actual Expiry Date,Instrument Strike Price,Instrument Option Type,Instrument Name,Open,High,Low,Close,LTP,Previous Close,Underlying Asset price,Settlement Price,Open Interest,Change in Open Interest,Total Traded Qty,Total Traded Value,Total Number of Trades,Session Id,Market Lot Size,Remarks,Dummy field 1,Dummy field 2,Dummy field 3,Dummy field 4
+Field Header - New format,TradDt,BizDt,Sgmt,Src,FinInstrmTp,FinInstrmId,ISIN,TckrSymb,SctySrs,XpryDt,FininstrmActlXpryDt,StrkPric,OptnTp,FinInstrmNm,OpnPric,HghPric,LwPric,ClsPric,LastPric,PrvsClsgPric,UndrlygPric,SttlmPric,OpnIntrst,ChngInOpnIntrst,TtlTradgVol,TtlTrfVal,TtlNbOfTxsExctd,SsnId,NewBrdLotQty,Rmks,Rsvd1,Rsvd2,Rsvd3,Rsvd4
+Q datatype,Date,Date,Sym,Sym,Sym,long,Sym,Sym,Sym,Date,Date,Float,Sym,long,Float,Float,Float,Float,Float,Float,Float,Float,Long,Long,Long,Float,Long,Sym,Long,*,,,,
 
 The BhavCopy file contains SctySrs at column no 9 with other that Equity.
 Hence, we need to filter it for Equite related security only.
